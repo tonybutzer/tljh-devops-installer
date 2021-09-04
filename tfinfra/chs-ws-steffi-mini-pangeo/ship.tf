@@ -21,16 +21,8 @@ resource "aws_instance" "mini" {
 
   security_groups = [var.security_group_ssh, ]
   root_block_device {volume_size = 440}
+  user_data = file("ship0.sh")
 
-  #user_data                   = "file{"files/${var.ship_userdata[count.index]}"}"
-  #user_data                   = "file("files/ship0.sh")"
-
-  user_data = <<EOF
-		#! /bin/bash
-                sudo apt-get update
-		sudo apt-get install -y make
-		echo "<h1>Deployed via Terraform</h1>" > /tmp/tony.txt
-EOF
 
   #count = 2
   count = 1
