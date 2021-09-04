@@ -18,5 +18,5 @@ tljh better install repo
 ## TLJH Package Install
 
 - login as ubuntu admin
-- terminal - cd files; make pip-packages
-- make pip-packages
+- terminal - cd files; make
+- make # builds most packages with pip - except datashader prereqs
