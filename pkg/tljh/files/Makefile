@@ -1,13 +1,14 @@
-base:
-	sudo -E pip install -r notebook-requirements.txt
-
-
-et-depends: notebook-lib gdal-pain
+et-depends: notebook-lib tensor harmony-addons cert-hell gdal-pain
 
 notebook-lib:
 	# SHould be run as ubuntu ROOT for tljh - all user ride for free
 	sudo -E pip install -r notebook-requirements.txt
 
+
+tensor: 
+	sudo -E pip install tensorflow
+	sudo -E pip install keras
+	sudo -E pip install sklearn
 
 gdal-pain:
 	sudo add-apt-repository ppa:ubuntugis/ppa && sudo apt-get update

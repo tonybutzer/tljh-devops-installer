@@ -1,3 +1,6 @@
+base:
+	sudo -E pip install -r notebook-requirements.txt
+
 
 et-depends: notebook-lib gdal-pain
 
