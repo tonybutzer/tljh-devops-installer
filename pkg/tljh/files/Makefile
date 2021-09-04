@@ -20,6 +20,7 @@ gdal-pain:
 	 sudo -E pip install GDAL==2.4 )
 
 harmony-addons:
+	sudo -E conda install llvmlite
 	sudo -E pip install -r harmony-addon-requirements.txt
 
 
