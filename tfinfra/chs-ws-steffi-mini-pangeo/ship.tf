@@ -22,7 +22,7 @@ resource "aws_instance" "mini" {
   security_groups = [var.security_group_ssh, ]
   root_block_device {volume_size = 440}
 
-  #user_data                   = "file("files/${var.ship_userdata[count.index]}")"
+  user_data                   = "file("files/${var.ship_userdata[count.index]}")"
 
   #count = 2
   count = 1
