@@ -1,4 +1,4 @@
-et-depends: notebook-lib tensor harmony-addons cert-hell gdal-pain
+et-depends: notebook-lib tensor harmony-addons cert-hell gdal-pain cull
 
 notebook-lib:
 	# SHould be run as ubuntu ROOT for tljh - all user ride for free
@@ -29,3 +29,7 @@ cert-hell:
 	#sudo apt-get install ca-certificates 
 	sudo mkdir -p /etc/pki/tls/certs
 	sudo cp /etc/ssl/certs/ca-certificates.crt /etc/pki/tls/certs/ca-bundle.crt
+	
+cull:
+	sudo tljh-config set services.cull.timeout 86400
+	sudo tljh-config reload
